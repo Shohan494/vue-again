@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Vue Course</title>
 </head>
 <body>
 
 	<div id="app">
+		<div>
 		<label>Goal</label>
 		<input type="text" id="goal" v-model="enteredValue"/>
-		<button>Add Goal</button>
+		<button v-on:click="addGoal">Add Goal</button>
+		</div>
 	</div>
+
+	<ul>
+		<li v-for="goal in goals">{{ goal }}</li>
+	</ul>
 
 <script src="https://unpkg.com/vue@next"></script>
 <script type="text/javascript" src="app.js"></script>
