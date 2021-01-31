@@ -12,7 +12,7 @@
 <section id="user-goal">
 	<h2>My Course Goal</h2>
 	<p>{{ courseGoalA }}</p>
-	<p>{{ courseGoalB }}</p>
+	<p v-html="courseGoalB"></p>
 
 	<p>{{ outputGoal() }}</p>
 	<p>Learn more <a v-bind:href="vueLink">About Vue</a></p>
