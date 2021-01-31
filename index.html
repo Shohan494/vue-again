@@ -7,15 +7,16 @@
 
 	<div id="app">
 		<div>
-		<label>Goal</label>
-		<input type="text" id="goal" v-model="enteredValue"/>
-		<button v-on:click="addGoal">Add Goal</button>
+			<label>Goal</label><br>
+			<input type="text" id="goal" v-model="enteredValue"/>
+			<button v-on:click="addGoal">Add Goal</button>
 		</div>
-	</div>
+	
 
-	<ul>
-		<li v-for="goal in goals">{{ goal }}</li>
-	</ul>
+		<ul>
+			<li v-for="goal in goals">{{ goal }}</li>
+		</ul>
+	</div>
 
 <script src="https://unpkg.com/vue@next"></script>
 <script type="text/javascript" src="app.js"></script>
