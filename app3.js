@@ -1,7 +1,7 @@
 const app = Vue.createApp({
 	data(){
 		return {
-			counter: 100,
+			counter: 0,
 		};
 	},
 });
