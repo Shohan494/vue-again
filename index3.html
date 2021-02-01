@@ -18,6 +18,12 @@
 
 	<input type="text" v-on:input="setName($event, 'Alam')">
 	<p>Your Name : {{name}}</p>
+
+	<form v-on:submit="submitForm">
+		<input type="text" name="">
+		<button>Sign Up</button>
+
+	</form>
 </section>
 
 <script src="https://unpkg.com/vue@next"></script>
