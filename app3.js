@@ -6,6 +6,15 @@ const app = Vue.createApp({
 			confirmedName: ''
 		};
 	},
+	computed: {
+		fullName(){
+			console.log('Running outputFullName');
+			if(this.name === ''){
+				return '';
+			}
+			return this.name + ' ' + 'Alam';			
+		}
+	},
 	methods: {
 		add(num){
 			this.counter = this.counter + num;
