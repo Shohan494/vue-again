@@ -5,7 +5,7 @@ const app = Vue.createApp({
 			name: '',
 			lastName: '',
 			confirmedName: '',
-			//fullName: ''
+			fullName: ''
 		};
 	},
 	watch: {
