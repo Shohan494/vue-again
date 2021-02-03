@@ -6,6 +6,9 @@
 		<button @click="toggleDetails">
 			Show Details
 		</button>
+		<button @click="toggleFavorite">
+			Toggle Favorite
+		</button>
 		<ul v-if="detailsAreVisible">
 			<li><strong>Phone: </strong>{{ phoneNumber }}</li>
 			<li><strong>Email: </strong>{{ emailAddress }}</li>
@@ -15,11 +18,25 @@
 
 <script>
 export default {
-	props: [
-		'name',
-		'phoneNumber',
-		'emailAddress'
-	],
+	// props: [
+	// 	'name',
+	// 	'phoneNumber',
+	// 	'emailAddress'
+	// ],
+	props: {
+		id: {
+			type: String,
+			required: true,			
+		}
+		name: {
+			type: String,
+			required: true,
+		},
+		phoneNumber: {
+			type: String,
+			required: true,			
+		}
+	},
 	data() {
 		return {
 			detailsAreVisible: false,
@@ -34,6 +51,9 @@ export default {
   methods: {
     toggleDetails(){
       this.detailsAreVisible = !this.detailsAreVisible;
+    },
+    toggleIsFavorite(){
+      this.$emit('toggle-favorite', this.id);
     }
   }
 }
