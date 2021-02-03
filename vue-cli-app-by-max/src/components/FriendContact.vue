@@ -7,8 +7,8 @@
 			Show Details
 		</button>
 		<ul v-if="detailsAreVisible">
-<!-- 			<li><strong>Phone: </strong>{{ phoneNumber }}</li>
- -->			<li><strong>Email: </strong>{{ emailAddress }}</li>
+			<li><strong>Phone: </strong>{{ phoneNumber }}</li>
+			<li><strong>Email: </strong>{{ emailAddress }}</li>
 		</ul>
 	</li>
 </template>
