@@ -6,7 +6,7 @@
 		<button @click="toggleDetails">
 			Show Details
 		</button>
-		<ul v-if="detailsAreAvailable">
+		<ul v-if="detailsAreVisible">
 			<li><strong>Phone: </strong>{{ friend.phone }}</li>
 			<li><strong>Email: </strong>{{ friend.email }}</li>
 		</ul>
@@ -17,7 +17,7 @@
 export default {
 	data() {
 		return {
-			detailsAreAvailable: false,
+			detailsAreVisible: false,
 			friend: { 
 				id: 'shohan', 
 				name: 'Shohanul Alam', 
