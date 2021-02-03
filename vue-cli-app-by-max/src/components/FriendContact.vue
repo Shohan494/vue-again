@@ -16,18 +16,21 @@
 <script>
 export default {
 	data() {
-		detailsAreAvailable: false,
-		friend: { 
-			id: 'shohan', 
-			name: 'Shohanul Alam', 
-			phone: '0188923974', 
-			email: 'shohan5917@gmail.com'
-		}
+		return {
+			detailsAreAvailable: false,
+			friend: { 
+				id: 'shohan', 
+				name: 'Shohanul Alam', 
+				phone: '0188923974', 
+				email: 'shohan5917@gmail.com'
+			},
+		};
 	},
   methods: {
     toggleDetails(){
       this.detailsAreVisible = !this.detailsAreVisible;
     }
+  }
 }
 </script>	
 
