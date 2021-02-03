@@ -31,7 +31,7 @@ export default {
 				},
 				{
 					id: "abul",
-					name: "Shohanul Abul",
+					name: "Abul Abul",
 					phone: "0188923974",
 					email: "abul@gmail.com",
 					isFavorite: false

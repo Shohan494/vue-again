@@ -1,7 +1,7 @@
 <template>
 	<li>
 		<h2>
-			{{ name }}
+			{{ name }} {{ isFavorite === true ? '(Favorite)' : '' }}
 		</h2>
 		<button @click="toggleDetails">
 			Show Details
@@ -27,18 +27,27 @@ export default {
 		id: {
 			type: String,
 			required: true,			
-		}
+		},
 		name: {
 			type: String,
 			required: true,
 		},
 		phoneNumber: {
 			type: String,
-			required: true,			
+			required: false,			
+		},
+		emailAddress:{
+			type: String,
+			required: false,	
+		},
+		isFavorite: {
+			type: Boolean,
+			required: true,
 		}
 	},
 	data() {
 		return {
+			friendIsFavorite: this.isFavorite,
 			detailsAreVisible: false,
 			friend: { 
 				id: 'shohan', 
@@ -52,7 +61,7 @@ export default {
     toggleDetails(){
       this.detailsAreVisible = !this.detailsAreVisible;
     },
-    toggleIsFavorite(){
+    toggleFavorite(){
       this.$emit('toggle-favorite', this.id);
     }
   }
