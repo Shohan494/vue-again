@@ -1,8 +1,4 @@
 <template>
-	<li>
-		<h2>
-			ADD NEW FRIEND
-		</h2>
 		<form>
 			<div>
 				<label>Name</label>
@@ -16,11 +12,11 @@
 				<label>Email</label>
 				<input type="email" name="">
 			</div>
+			<button>
+				ADD FRIEND
+			</button>
 		</form>
-		<button @click="toggleDetails">
-			Show Details
-		</button>
-	</li>
+
 </template>
 
 <script>
@@ -31,13 +27,14 @@ export default {
 	},
 
 	emits: [
-
+		'add-contact'
 	],
-
 	data() {
 		return {
-
-		}
+			enteredName: '',
+			enteredPhone: '',
+			enteredEmail: '',
+		};
 	},
   methods: {
 
