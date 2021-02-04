@@ -4,7 +4,7 @@
 			<h2>My Friends</h2>
 		</header>
 
-		<new-friend></new-friend>
+		<new-friend @add-contact="addContact"></new-friend>
 
 		<ul>
 			<friend-contact
@@ -50,6 +50,17 @@ export default {
 				friend => friend.id === friendId
 			);
 			identifiedFriend.isFavorite = !identifiedFriend.isFavorite;
+		},
+
+		addContact(name, phone, email){
+			const newFriend = {
+				id: new Date().toISOString(),
+				name: name,
+				phonw: phone,
+				email: email,
+				isFavorite: false
+			};
+			this.friends.push(newFriend);
 		}
 	}
 };

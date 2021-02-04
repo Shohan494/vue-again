@@ -1,16 +1,16 @@
 <template>
-		<form>
+		<form @submit.prevent="submitData">
 			<div>
 				<label>Name</label>
-				<input type="text" name="">
+				<input type="text" v-model="enteredName">
 			</div>
 			<div>
 				<label>Phone</label>
-				<input type="tel" name="">
+				<input type="tel" v-model="enteredPhone">
 			</div>
 			<div>
 				<label>Email</label>
-				<input type="email" name="">
+				<input type="email" v-model="enteredEmail">
 			</div>
 			<button>
 				ADD FRIEND
@@ -21,7 +21,6 @@
 
 <script>
 export default {
-
 	props: {
 
 	},
@@ -37,7 +36,9 @@ export default {
 		};
 	},
   methods: {
-
+    submitData(){
+      this.$emit('add-contact', this.enteredName, this.enteredPhone, this.enteredEmail);
+    },
   }
 };
 </script>	
