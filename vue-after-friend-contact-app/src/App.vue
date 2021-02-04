@@ -42,6 +42,19 @@ export default {
       this.activeTopic = this.topics.find((topic) => topic.id === topicId);
     },
   },
+  mounted() {
+    setTimeout(() => {
+      this.topics.push(        {
+          id: 'components2',
+          title: 'Components2',
+          description:
+            'Components are a core concept for building Vue UIs and apps 2',
+          fullText:
+            'With components, you can split logic (and markup) into separate building blocks and then combine those building blocks (and re-use them) to build powerful user interfaces 2.',
+        })
+    }, 3000);
+  }
+
 };
 </script>
 
