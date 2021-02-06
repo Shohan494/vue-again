@@ -42,13 +42,24 @@ export default {
   },
   provide() {
     return {
-      storedResources: this.storedResources
+      storedResources: this.storedResources,
+      addResource: this.addResource
     }
   },
   methods: {
     setSelectedTab(tab) {
       this.selectedTab = tab;
     },
+    addResource(title, des, link) {
+      const newResource = {
+        id: new Date().toISOString(),
+        title: title,
+        description: des,
+        link: link
+      };
+      this.storedResources.unshift(newResource);
+      this.selectedTab = 'stored-resources';
+    }
   },
 };
 </script>
