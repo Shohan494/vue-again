@@ -1,5 +1,25 @@
 <template>
-  <h2>Add Resource</h2>
+  <base-card>
+    <h2>Add Resource</h2>
+    <form action="">
+      <div class="form-control">
+        <label for="title">title</label>
+        <input id="title" name="title" type="text" />
+      </div>
+      <div class="form-control">
+        <label for="description">description</label>
+        <input id="description" name="description" rows=3 type="textarea" />
+      </div>
+      <div class="form-control">
+        <label for="link">link</label>
+        <input id="link" name="link" type="url" />
+      </div>
+      <div>
+    <base-button type="submit">Add Resource</base-button
+    >        
+      </div>
+    </form>
+  </base-card>
 </template>
 
 <script>
@@ -9,33 +29,29 @@ export default {
 </script>
 
 <style scoped>
-li {
-  margin: auto;
-  max-width: 40rem;
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.5rem;
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+input,
+textarea {
+  display: block;
+  width: 100%;
+  font: inherit;
+  padding: 0.15rem;
+  border: 1px solid #ccc;
 }
 
-h3 {
-  font-size: 1.25rem;
-  margin: 0.5rem 0;
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #3a0061;
+  background-color: #f7ebff;
 }
 
-p {
-  margin: 0.5rem 0;
-}
-
-a {
-  text-decoration: none;
-  color: #ce5c00;
-}
-
-a:hover,
-a:active {
-  color: #c89300;
+.form-control {
+  margin: 1rem 0;
 }
 </style>
