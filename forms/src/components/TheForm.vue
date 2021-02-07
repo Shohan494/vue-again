@@ -97,7 +97,7 @@
     </div>
 
     <div class="form-control">
-      <rating-control></rating-control>
+      <rating-control v-model="rating"></rating-control>
     </div>
 
     <div class="form-control">
@@ -156,8 +156,12 @@ export default {
       // this.interest = [];
       // this.how = null;
 
-      console.log(this.confirm);
-      this.confirm = false;
+      // console.log(this.confirm);
+      // this.confirm = false;
+
+
+      console.log(this.rating);
+      this.rating = null
     },
   },
 };
