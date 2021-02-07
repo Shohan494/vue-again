@@ -128,6 +128,7 @@ export default {
       how: null,
       confirm: false,
       userNameValidity: 'pending',
+      rating: null
     };
   },
   methods: {
