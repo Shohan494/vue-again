@@ -79,7 +79,7 @@ export default {
       console.log('Radio : ');
       console.log(this.how);
 
-      this.interest = null;
+      this.interest = [];
       this.how = null;
 
     }
